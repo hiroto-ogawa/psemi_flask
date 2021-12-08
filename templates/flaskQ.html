@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+        <div class="main">
+            <ul>
+            {% for x in list %}
+                <li>{{ x }}</li>
+            {% endfor %}
+            </ul>
+            <hr>
+
+            <p>{{ "nickname: %s age: %s address: %s" %(dict["nickname"], dict["age"], dict["address"]) }}</p>
+            <hr>
+
+            {% if rand % 2 == 0 %}
+                <p>{{ rand }}は偶数</p>
+            {% else %}
+                <p>{{ rand }}は奇数</p>
+            {% endif %}
+        </div>
+    </body>
+</html>
